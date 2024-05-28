@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		BB3A30742BF75E5900A21BDA /* FoodingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30732BF75E5900A21BDA /* FoodingApp.swift */; };
-		BB3A30762BF75E5900A21BDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30752BF75E5900A21BDA /* ContentView.swift */; };
+		BB3A30762BF75E5900A21BDA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30752BF75E5900A21BDA /* MenuView.swift */; };
 		BB3A30782BF75E5900A21BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3A30772BF75E5900A21BDA /* Assets.xcassets */; };
 		BB3A307B2BF75E5900A21BDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3A307A2BF75E5900A21BDA /* Preview Assets.xcassets */; };
-		BB3A30822BF7717100A21BDA /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30812BF7717100A21BDA /* MainMenuView.swift */; };
-		BB3A30842BF7718200A21BDA /* SideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30832BF7718200A21BDA /* SideView.swift */; };
-		BB3A30862BF7719100A21BDA /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30852BF7719100A21BDA /* DrinkView.swift */; };
-		BB3A30882BF771A300A21BDA /* AddMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30872BF771A300A21BDA /* AddMenuView.swift */; };
+		BB3A30822BF7717100A21BDA /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A30812BF7717100A21BDA /* MenuItemView.swift */; };
+		C55079F42BFC9FBA006E8B81 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55079F32BFC9FBA006E8B81 /* MenuData.swift */; };
+		C55079F62BFCA757006E8B81 /* FoodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55079F52BFCA757006E8B81 /* FoodingView.swift */; };
+		C5F771072C06021300853E66 /* AfterOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F771062C06021300853E66 /* AfterOrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB3A30702BF75E5900A21BDA /* Fooding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fooding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3A30732BF75E5900A21BDA /* FoodingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodingApp.swift; sourceTree = "<group>"; };
-		BB3A30752BF75E5900A21BDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB3A30752BF75E5900A21BDA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BB3A30772BF75E5900A21BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB3A307A2BF75E5900A21BDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB3A30812BF7717100A21BDA /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
-		BB3A30832BF7718200A21BDA /* SideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideView.swift; sourceTree = "<group>"; };
-		BB3A30852BF7719100A21BDA /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
-		BB3A30872BF771A300A21BDA /* AddMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuView.swift; sourceTree = "<group>"; };
+		BB3A30812BF7717100A21BDA /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		C55079F32BFC9FBA006E8B81 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		C55079F52BFCA757006E8B81 /* FoodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodingView.swift; sourceTree = "<group>"; };
+		C5F771062C06021300853E66 /* AfterOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterOrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +59,14 @@
 		BB3A30722BF75E5900A21BDA /* Fooding */ = {
 			isa = PBXGroup;
 			children = (
+				C5F771062C06021300853E66 /* AfterOrderView.swift */,
+				C55079F52BFCA757006E8B81 /* FoodingView.swift */,
 				BB3A30732BF75E5900A21BDA /* FoodingApp.swift */,
-				BB3A30752BF75E5900A21BDA /* ContentView.swift */,
-				BB3A30832BF7718200A21BDA /* SideView.swift */,
-				BB3A30812BF7717100A21BDA /* MainMenuView.swift */,
-				BB3A30852BF7719100A21BDA /* DrinkView.swift */,
-				BB3A30872BF771A300A21BDA /* AddMenuView.swift */,
+				BB3A30752BF75E5900A21BDA /* MenuView.swift */,
+				BB3A30812BF7717100A21BDA /* MenuItemView.swift */,
 				BB3A30772BF75E5900A21BDA /* Assets.xcassets */,
 				BB3A30792BF75E5900A21BDA /* Preview Content */,
+				C55079F32BFC9FBA006E8B81 /* MenuData.swift */,
 			);
 			path = Fooding;
 			sourceTree = "<group>";
@@ -149,11 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB3A30822BF7717100A21BDA /* MainMenuView.swift in Sources */,
-				BB3A30882BF771A300A21BDA /* AddMenuView.swift in Sources */,
-				BB3A30842BF7718200A21BDA /* SideView.swift in Sources */,
-				BB3A30762BF75E5900A21BDA /* ContentView.swift in Sources */,
-				BB3A30862BF7719100A21BDA /* DrinkView.swift in Sources */,
+				BB3A30822BF7717100A21BDA /* MenuItemView.swift in Sources */,
+				C5F771072C06021300853E66 /* AfterOrderView.swift in Sources */,
+				BB3A30762BF75E5900A21BDA /* MenuView.swift in Sources */,
+				C55079F62BFCA757006E8B81 /* FoodingView.swift in Sources */,
+				C55079F42BFC9FBA006E8B81 /* MenuData.swift in Sources */,
 				BB3A30742BF75E5900A21BDA /* FoodingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
