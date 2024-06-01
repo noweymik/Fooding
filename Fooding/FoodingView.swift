@@ -11,6 +11,7 @@ import SwiftUI
 struct FoodingView: View {
     @State var selectedButton: String = "메인메뉴"
     @State private var isCartPresented: Bool = false // 장바구니 모달 표시용
+    @State private var isOrderCompletePresented: Bool = false // 주문완료 모달 표시용
     @State var cartMenus: [(menu: Menu, count: Int)] = []
     @State var sum: Int = 0
     
@@ -28,7 +29,10 @@ struct FoodingView: View {
                 }
                 .padding()
                 .sheet(isPresented: $isCartPresented) {
-                    CartView(isCartPresented: $isCartPresented, cartMenus: $cartMenus, sum: $sum)
+                                    CartView(isCartPresented: $isCartPresented, cartMenus: $cartMenus, sum: $sum, isOrderCompletePresented: $isOrderCompletePresented)
+                }
+                .sheet(isPresented: $isOrderCompletePresented) {
+                    OrderCompleteView(isOrderCompletePresented: $isOrderCompletePresented, cartMenus: $cartMenus, sum: $sum)
                 }
             }
             HStack(spacing: 0) {
@@ -67,6 +71,7 @@ struct CartView: View {
     @Binding var isCartPresented: Bool
     @Binding var cartMenus: [(menu: Menu, count: Int)]
     @Binding var sum: Int
+    @Binding var isOrderCompletePresented: Bool
     
     
     var body: some View {
@@ -133,7 +138,9 @@ struct CartView: View {
                 Button(action: {
                     // 주문하면~~~~?
                     print("주문하기")
-                    
+                    isCartPresented = false
+                    isOrderCompletePresented = true
+                                        
                 }) {
                     Text("주문하기")
                         .font(.title)
@@ -146,5 +153,55 @@ struct CartView: View {
 
         }
         .padding()
+    }
+}
+
+struct OrderCompleteView: View {
+    @Binding var isOrderCompletePresented: Bool
+    @Binding var cartMenus: [(menu: Menu, count: Int)]
+    @Binding var sum: Int
+        
+    
+    var body: some View {
+        VStack {
+            Text("주문완료!")
+                .font(.largeTitle)
+                .padding()
+                .padding(.top, 20)
+                .bold()
+                .foregroundColor(.red)
+            
+            Divider()
+            Spacer()
+            Text("주문내역")
+                .font(.headline)
+            List {
+                ForEach(cartMenus, id: \.menu.name) { item in
+                    HStack {
+                        Text(item.menu.name)
+                        Spacer()
+                        Text("\(item.count)개")
+                    }
+                }
+            }
+            Text("총합 : \(sum)")
+                .font(.largeTitle)
+                .padding()
+                .bold()
+            
+            Button(action: {
+                isOrderCompletePresented = false
+                sum = 0
+                cartMenus = []
+            }) {
+                Text("닫기")
+                    .font(.title)
+                    .padding()
+                    .background(Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding()
+        }
     }
 }
